@@ -108,4 +108,4 @@ def create_order_menu():
 
 
 
-bot.infinity_polling()
+bot.polling(none_stop=True)
