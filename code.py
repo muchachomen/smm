@@ -1,19 +1,6 @@
 import telebot
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
-import sqlite3
 
-
-conn = sqlite3.connect("bot_database.db", check_same_thread=False)
-cursor = conn.cursor()
-
-
-def initialize_database():
-    with open("database.sql", "r") as file:
-        sql_script = file.read()
-    cursor.executescript(sql_script)
-    conn.commit()
-
-initialize_database()
 
 
 
